@@ -6,10 +6,8 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     company: '',
-    budget: '',
-    service: '',
-    timeline: '',
     message: ''
   });
 
@@ -31,10 +29,8 @@ export default function Contact() {
           {
             name: formData.name,
             email: formData.email,
-            company: formData.company,
-            budget: formData.budget,
-            service: formData.service,
-            timeline: formData.timeline,
+            phone: formData.phone || null,
+            company: formData.company || null,
             message: formData.message
           }
         ]);
@@ -45,10 +41,8 @@ export default function Contact() {
       setFormData({
         name: '',
         email: '',
+        phone: '',
         company: '',
-        budget: '',
-        service: '',
-        timeline: '',
         message: ''
       });
 
@@ -136,6 +130,17 @@ export default function Contact() {
                 </div>
 
                 <div>
+                  <label className="block text-gray-300 mb-2 font-semibold">Phone Number</label>
+                  <input
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    className="w-full bg-black/50 border border-cyan-brand/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-brand transition-colors"
+                    placeholder="+1 (555) 123-4567"
+                  />
+                </div>
+
+                <div>
                   <label className="block text-gray-300 mb-2 font-semibold">Company Name</label>
                   <input
                     type="text"
@@ -144,54 +149,6 @@ export default function Contact() {
                     className="w-full bg-black/50 border border-cyan-brand/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-brand transition-colors"
                     placeholder="Your Company"
                   />
-                </div>
-
-                <div>
-                  <label className="block text-gray-300 mb-2 font-semibold">Project Budget *</label>
-                  <select
-                    required
-                    value={formData.budget}
-                    onChange={(e) => setFormData({...formData, budget: e.target.value})}
-                    className="w-full bg-black/50 border border-cyan-brand/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-brand transition-colors"
-                  >
-                    <option value="">Select Your Budget Range</option>
-                    <option value="500-1000">$500 - $1,000</option>
-                    <option value="1000-2500">$1,000 - $2,500</option>
-                    <option value="2500-5000">$2,500 - $5,000</option>
-                    <option value="5000-10000">$5,000 - $10,000</option>
-                    <option value="10000+">$10,000+</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-gray-300 mb-2 font-semibold">Primary Interest *</label>
-                  <select
-                    required
-                    value={formData.service}
-                    onChange={(e) => setFormData({...formData, service: e.target.value})}
-                    className="w-full bg-black/50 border border-cyan-brand/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-brand transition-colors"
-                  >
-                    <option value="">Select Your Primary Interest</option>
-                    <option value="process-automation">Process Automation</option>
-                    <option value="data-analytics">Data Analytics</option>
-                    <option value="custom-ai">Custom AI Solution</option>
-                    <option value="chatbot">Chatbot Development</option>
-                    <option value="consultation">General Consultation</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-gray-300 mb-2 font-semibold">Project Timeline</label>
-                  <select
-                    value={formData.timeline}
-                    onChange={(e) => setFormData({...formData, timeline: e.target.value})}
-                    className="w-full bg-black/50 border border-cyan-brand/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-brand transition-colors"
-                  >
-                    <option value="">Select Timeline</option>
-                    <option value="immediate">Immediate (Less than 1 month)</option>
-                    <option value="quarter">This Quarter</option>
-                    <option value="planning">Planning Phase</option>
-                  </select>
                 </div>
               </div>
 
