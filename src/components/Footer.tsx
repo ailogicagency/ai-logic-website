@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <img src="/ChatGPT Image Oct 4, 2025, 09_31_03 PM.png" alt="AiLogic Agency" className="h-10 w-10 object-contain" />
+              <img src="/ChatGPT Image Oct 4, 2025, 09_31_03 PM copy.png" alt="AiLogic Agency" className="h-10 w-10 object-contain" />
               <span className="text-2xl font-bold text-white">AiLogic Agency</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md leading-relaxed">

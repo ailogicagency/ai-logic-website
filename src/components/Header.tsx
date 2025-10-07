@@ -17,7 +17,7 @@ export default function Header() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img src="/ChatGPT Image Oct 4, 2025, 09_31_03 PM.png" alt="AiLogic Agency" className="h-12 w-12 object-contain" />
+            <img src="/ChatGPT Image Oct 4, 2025, 09_31_03 PM copy.png" alt="AiLogic Agency" className="h-12 w-12 object-contain" />
             <span className="text-2xl font-bold text-white">AiLogic Agency</span>
           </div>
 
