@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0A0A0A;
+    color: #E0E0E0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rajdhani', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-cyan-brand {
+    color: #00D4E5;
+  }
+
+  .bg-cyan-brand {
+    background-color: #00D4E5;
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 212, 229, 0.3);
+  }
+
+  .glow-cyan-hover:hover {
+    box-shadow: 0 0 30px rgba(0, 212, 229, 0.5);
+  }
+}
